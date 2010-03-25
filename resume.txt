@@ -1,0 +1,167 @@
+Jim ZAJKOWSKI
+  3147 Village Circle South * Ann Arbor, MI * 48108
+  734-846-1988 * jamesez@umich.edu
+
+EXPERIENCE
+==========
+System Administrator                            2003-present
+ Life Sciences Institute, University of Michigan
+ 
+ * Wrote major line-of-business applications:
+     Procurement and purchasing system; [1]
+     Personnel / HR database; [1]
+     Building and IT access portal; [1]
+     Usage collector and billing system for NMRs and
+       X-ray crystallographic scanners; [2]
+     Account provisioning portal. [1]
+     
+     [1]: Ruby on Rails.
+     [2]: C wrapper, Perl server, Ruby on Rails front end.
+ 
+ * Designed and implemented significant majority of 
+   computing infrastructure on all platforms, including:
+     Windows Active Directory (Win 2008), plus
+       DHCP and DNS,
+       Shared file service (SMB/CIFS);
+     Exchange 2007, with
+       E-mail antivirus and spam filtering:
+         Originally dspam + clamav; then Brightmail,
+       List server (mailman),
+       BlackBerry Enterprise server;
+     Wrote account provisioning and password self-service
+       web application;
+     VMware ESX environment: 8 hosts, ~60 VMs;
+     Storage management:
+       Current FC (Brocade, QLogic) SAN,
+       Future EqualLogic iSCSI environment;
+     Tivoli Storage Manager (TSM) backup server:
+       Linux x64, IBM 3584 LTO robot, 32 TB managed;
+     Cluster computing:
+       32-node Mac G5 cluster, using Condor,
+       160-core Linux cluster, using Sun Grid Engine;
+     Linux workstation shared storage:
+       Solaris with ZFS;
+     Wireless network and authentication gateway;
+     All physical datacenter operations
+     
+ * Designed and implemented Macintosh desktop environment
+   from Mac OS 10.3 on:
+     10.3: Based on radmind, tightly controlled;
+     10.4: Custom NetInstall solution;
+     10.5: Streamlined initial load, automated and 
+           simplified package installer, easy maintenance;
+     10.6: Optimized, single-image deployment from
+           automatically built image.
+   Beginning with 10.4, built central Open Directory
+     server for computer logins, etc., including a custom
+     in-house password reset portal for users.
+   With 10.6, Mac desktops authenticate to our Windows
+     Active Directory, but rely on an OD server for
+     managed preferences.
+   Apple Certified Mac Technician: performed on-site
+     hardware repair and troubleshooting.
+     
+ * Network administration: replaced LSI's Cisco-based
+   network with new HP ProCurves.  Specified, installed,
+   and deployed all new switches.  Ensured compatibility
+   with existing Cisco VoIP handsets and wireless APs.
+   New network uses 10 GbE backbone.  Saved LSI over
+   $250,000 by doing it in-house with HP switches.
+
+ * Wrote miscellaneous smaller tools, such as:
+     GroupWise-to-Exchange converter, to convert e-mail,
+       calendar, and address book entries.  Used this
+       tool to port 90+ users from GroupWise in under
+       two weeks;
+     Printer monitoring tools to make sure adequate
+       supplies are on hand;
+     Network monitoring of MAC addresses.
+     
+ * Explored and made significant purchasing decisions
+   for major systems, including: iSCSI storage, Fibre 
+   Channel switches and storage, all server systems (Unix, 
+   Mac, Windows), remote desktop support tools, spam
+   filtering.
+     
+ * Supervised intern/student employees.
+
+
+Web Developer                                   1996-present
+ Surveys of Consumers, University of Michigan
+ 
+ * Continually improved Surveys's web portal from its 
+   original ColdFusion/Access site (1996) through a rewrite
+   to ASP/MSSQL (1996-2000), then again to PHP/PostgreSQL
+   (2000-current), now onto Ruby on Rails (in closed beta).
+   
+   Challenges include a hand-tuned subsetting calculator,
+   very specific content delivery timing requirements,
+   and now video delivery.
+   
+   Sponsor portal is at http://www.sca.isr.umich.edu
+   
+   In early 2010, I built a specialized portal for members
+   of the press, at http://press.sca.isr.umich.edu
+   
+   
+System Administrator                             2000-2003
+ ITCS Contract Services, University of Michigan
+ 
+ * Member of a fractional system administration group.  I 
+   provided on-site administration for various small 
+   organizations around the campus, working in 10 hour 
+   blocks.  Significant contributions were building a 
+   security consulting group for investigating incidents and 
+   building classroom application management for Windows 
+   desktops used by IT Education training.  Focused 
+   primarily on Solaris 2.5.1 through Solaris 8, RedHat 
+   Linux 7, and Windows 2000.
+
+   
+Web Developer                                   1996-1999
+ John Wiley & Sons, Inc, New York, NY
+ 
+ * Developed in-house journal issue processing system that 
+   accepted FTP'd PDF and SGML files, inserted them into 
+   Informix Illustra, displayed articles to publishing 
+   editors who would then approve them for final production.  
+   Approved whole issues would be batched together for a 
+   nightly delivery to indexing services and other 
+   subscribers.
+ 
+ * Wrote a web tool for authors to submit their additional 
+   material that was not publishable - e.g., source code - 
+   and for readers to access and download that material.
+ 
+ * Wrote a simple markup languages to prepare journal portal 
+   sites.
+ 
+
+EDUCATION
+=========
+  2000: B.S.E. in Computer Engineering, Cum Laude
+        University of Michigan College of Engineering
+        
+        
+BUZZWORDS
+=========
+  I prefer programming in Ruby or Objective-C, but have 
+  written significant production code in C, C++, Java, PHP, 
+  and VB.
+  
+  Much of my code is on http://git.lsi.umich.edu and
+  http://github.com/jamesez.  Some of the line of business
+  apps are not public but I can provide code if requested.
+  
+  My HTML goes back to the one pixel GIF and tables within 
+  tables, but I prefer CSS these days.
+  
+  I love git, but any version control is better than none.  
+  
+  I believe in using technologies that are appropriate 
+  rather than sticking with set ideology, but I am quick 
+  to use new technologies that have actual improvements; I 
+  think Exchange is a pretty good calendar server, but I 
+  prefer my Mac desktop and I'd rather be coding with RoR 
+  than JSP.
+  
