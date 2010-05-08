@@ -4,7 +4,15 @@ Jim ZAJKOWSKI
 
 EXPERIENCE
 ==========
-System Administrator                            2003-present
+System Administrator Senior                   2010-present
+ LSA Instructional Support Services
+ College of Literature, Sciences, and the Arts,
+   University of Michigan
+   
+ * Mac administration team member.
+
+
+System Administrator Intermediate                2003-2010
  Life Sciences Institute, University of Michigan
  
  * Wrote major line-of-business applications:
