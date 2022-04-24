@@ -1,3 +1,5 @@
+% vscode's LaTeX workshop likes latexmk to be available
+% install with sudo tlmgr install latexmk
 \documentclass[letterpaper,10pt]{article}
 
 \usepackage{palatino}
@@ -12,6 +14,8 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
+
+\newcommand{\munki}{\texttt{munki}}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -44,43 +48,46 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{\hspace{0.5em}#2}
+    \textbf{#1}{\hspace{0.6em}#2}
   }
 }
 
 % Just in case someone needs a heading that does not need to be in a list
 \newcommand{\resumeHeading}[4]{
+    \vspace{1em}
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-2pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  % \vspace{-1pt}
+  \item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       {\small #3} & {\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textit{\small #1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}%\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
 
-\renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
+% \renewcommand{\labelitemii}{$\circ$}
+
+\setlist[itemize]{leftmargin=1.5em,label=}
 %-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
@@ -103,24 +110,55 @@
       \resumeSubSubheading
         {DevOps Architect Supervisor}{2017--Present}
         \resumeItemListStart
-          \resumeItem{Tensorflow}
-            {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models. Worked on APIs and performance for training models on Tensor Processing Units (TPU).}
-          \resumeItem{Apache Beam}
-            {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+          \resumeItem{Izzy as a Service}
+            {For those University units that preferred to run their own desk-side support, we internally re-sold our management platform. Much like the MiWorkspace rollout, I met with unit leadership, technical stakeholders, and end-users to answer questions about Mac management capabilities and technologies. I successfully coordinated bringing on Michigan Medicine (PHI), the College of Engineering (ITAR), Ross Business School, and as of today, all but one department to the platform. We also added the Dearborn campus. We have just over 10,000 systems under management, which continues to grow as units rebuild into our toolchain. I have consulted with Michigan Medicine involving issues with their VMware Workspace One environment, which they use for BYOD devices.}
+
+          \resumeItem{Izzy Client}
+            {In preparation for Apple Silicon systems, I rewrote our library of on-client scripts and tools - many written in Ruby or Bash - to a single unified Swift binary. This allows us to exempt the tool in CrowdStrike, and we push a profile to grant it full disk access.}
+
+          \resumeItem{Izzy at Home}
+            {When COVID-19 hit, I was able to fix and scale up our emergency-use zero-touch installs to full production within a week, and were completely zero-touch by the end of March 2020. I unified our bootstrap process to work in either on-campus or at-home and we continue to use zero-touch with about 1 in 4 systems. We also use zero-touch in situations where a system needs to be reloaded but it isn't convenient for the customer to return it to campus. I worked with our Windows team to help build an offline domain join registry for their InTune-based at-home deployment.}
+
+          \resumeItem{Telemetry and Monitoring}
+            {In addition to the reporting Izzy and Jamf both gather, I plumbed in ElasticSearch, providing robust dashboards and metrics to monitor the state of the overall fleet. We used these dashboards to adjust deployment deadlines for macOS patch updates, realizing that the majority of users upgraded within a week of release.}
+
+          \resumeItem{Plenary Developer}
+            {I have been a lead developer on tools for collaborative services, including a Microsoft Teams creation and syncronization engine, a pre-flight advisor for Slack Enterprise migrations, and GitHub Enterprise internal re-billing for services. I am a member of the Technology Review Board which all new projects must meet with before developing solutions. I have been an early adopter of cloud, devops, and container technologies, and advise on and advocate for modern devops practices.}
         \resumeItemListEnd
 
-      \resumeSubSubheading
+        \resumeSubSubheading
         {Mac Team Lead}{2015--2017}
         \resumeItemListStart
-          \resumeItem{Apache Beam}
-            {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+          \resumeItem{MiWorkspace}
+            {With the roll-out of NextGen's desktop service - MiWorkspace - I became the team lead, overseeing four direct reports. I was responsible for coordinating work between the team and each University department as they enrolled in the service, meeting with techincal specialists in each unit, and adjusting our services to meet their specific unit's needs. During this roll-out phase, we simultaneously had four different units in different states of engagement, from prepatory meetings, proof of concept, actual nightly deployments, and post-deployment adjustments.}
+
+          \resumeItem{DevOps}
+            {I transitioned Izzy's infrastructure to running first in Docker and managed with Ansible, then finally to a managed Kubernetes cluster in AWS; in addition to continuous deployment, automatic resiliencey reduced on-call demands. I designed and deployed a on-campus package content delivery network, delivering terabytes of package updates weekly to thousands of clients.}
+
+          \resumeItem{Jamf}
+            {With increased requirements around DEP, supervision, and MDM profile deployments, we deployed Jamf Pro to support initial bootstrap and profile management. We continue to use \munki's best-in-class package resolution. Jamf is controlled via APIs called from the Izzy web app.}
         \resumeItemListEnd
 
       \resumeSubSubheading
         {Platform Senior Engineer}{2012--2015}
         \resumeItemListStart
-          \resumeItem{Apache Beam}
-            {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+          \resumeItem{NextGen Michigan}
+            {In 2012, the University redesigned central IT services, including - for the first time ever - a full desktop management service. Izzy became the key technology for Mac management, and I was responsible for implementing Izzy at campus scale. We scaled to over 4,000 clients by 2014.}
+
+          \resumeItem{Automation}
+            {As part of NextGen, we hired two additional Mac team members. Together, we expanded my Jenkins-based package automation to around 300 different titles, all automatically picked up and deployed to test and QA clients, and then deployed to production weekly. I was the lead developer on the automation pipeline, helping my teammates develop techniques in HTML scraping and command-line package creation.}
+
+          \resumeItem{Iron Izzy}
+            {I designed a FileVault management toolchain for Izzy, called Iron Izzy, to enable FileVault and key escrow, for Mac OS 10.7 clients. The tool was built in Ruby and Objective C, and coordinated key rotation with Izzy. All MacBooks built with Izzy were additionally secured by Iron Izzy.}
+
+          \resumeItem{Block M Menubar}
+            {I wrote a menubar tool in Objective C for quick access to support links and shared storage. It received its configuration from Izzy, and could be customized at a business unit level.}
+
+          \resumeItem{IzzyStor}
+            {I wrote a Mac OS app to archive and restore systems for rebuilding them - an offline migration assistant. These tool was used by the night onboarding team to archive, reload, and restore up to fifty systems a night. For safety, IzzyStor encrypts all archives at rest.}
+
+          \resumeItem{Campus Computing}
+            {I coordinated the replacement of \texttt{radmind} to Izzy for the University's public use computing sites, approximately 500 clients across 60 locations.}
         \resumeItemListEnd
 
 %-------------------------------------------
@@ -130,13 +168,15 @@
       {LSA Mac Lead}{2010--2013}
       \resumeItemListStart
         \resumeItem{Simple NetInstall}
-          {Managed the College's Mac deployment system, updating it for Mac OS X 10.6 and new packages every semester. This system was end-of-lifed with 10.7.}
+          {Managed the College's Mac deployment system, updating it for Mac OS X 10.6 and new packages every semester. This system was retired when Izzy launched alongisde Mac OS X 10.7}
         \resumeItem{Izzy}
-          {Using munki, Rails, and packagemaker, I created a lifecycle management system for Mac OS at the college, Izzy. Izzy let the support staff in the field deploy new packages to systems at any time though a simple web interface, rather than at build time with NetInstall or by hand, saving hundreds of hours. Izzy additionally let units create templates for their builds, and each department's access was siloed. Izzy immediately ramped to over 1,000 systems in five months.}
+          {Using \munki, Rails, and \texttt{packagemaker}, I created a lifecycle management system for Mac OS at the college, Izzy. Izzy let the support staff in the field deploy new packages to systems at any time though a simple web interface, rather than at build time with NetInstall or by hand, speeding installation request resolution times. Izzy  allows IT staff to manage defaults for their builds, and each department's access was siloed. Izzy immediately ramped to over 1,000 systems in five months.}
         \resumeItem{Package Automation}
           {I automated some very common packages (Firefox, Adobe Flash Player, Chrome, etc) using Jenkins. This allowed the college to be extremely timely with Flash security updates, deploying updates within hours of the new version being released, and requiring no manual steps.}
         \resumeItem{IzzyBoot}
-          {Created a bare-metal imaging workflow for Macs, by creating an Objective-C wrapper around asr. IzzyBoot leveraged a decision engine in Izzy to pick which base OS was appropriate for the device, as Mac OS versions were occasionally model-specific. The wrapper would register the client with Izzy as well. This tool made building (and re-building) systems faster and more reliable than manually installing the OS, as the Mac would reboot into munki's package installation after imaging.}
+          {Created a bare-metal imaging workflow for Macs, by creating an Objective-C wrapper around \texttt{asr}. IzzyBoot leveraged a decision engine in Izzy to pick which base OS was appropriate for the device, as Mac OS versions were occasionally model-specific. IzzyBoot registered the client with Izzy and pre-deployed \munki, making builds faster and more reliable than installing by hand.}
+        \resumeItem{BlueReview}
+          {Wrote an end-to-end lecture capture service, backed by Rails and Mac OS technologies AVKit and EventKit. This service captured over 100 lectures a week from the 12 largest auditoria on campus.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -180,18 +220,18 @@
 \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Github Visualization}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-    \resumeSubItem{Recommendation System}
-      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-    \resumeSubItem{Mac Setup}
-      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
-  \resumeSubHeadingListEnd
+% %-----------PROJECTS-----------------
+% \section{Projects}
+%   \resumeSubHeadingListStart
+%     \resumeSubItem{QuantSoftware Toolkit}
+%       {Open source python library for financial data analysis and machine learning for finance.}
+%     \resumeSubItem{Github Visualization}
+%       {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+%     \resumeSubItem{Recommendation System}
+%       {Music and Movie recommender systems using collaborative filtering on public datasets.}
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+%   \resumeSubHeadingListEnd
 
 %
 %--------PROGRAMMING SKILLS------------
