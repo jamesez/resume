@@ -111,18 +111,18 @@
         {DevOps Architect Supervisor}{2017--Present}
         \resumeItemListStart
           \resumeItem{Izzy as a Service}
-            {To expand the scope of Mac management to all of campus, I proposed and led an initiative to sell Izzy, the Ruby platform I developed to control \munki\ and Jamf, as an independent service. I met with unit leadership, technical stakeholders, and end-users to understand their needs and discuss the benefits of embracing Mac management technologies. I provided pilots, training, and ongoing support during each unit's full-scale roll-out process. I coordinated bringing on all but one campus department, school, and college - from dozens to thousands of systems - including Michigan Medicine (PHI), the College of Engineering (ITAR), Ross Business School, and the Dearborn campus. As of today, we have just over 10,000 systems under management. I have worked with Michigan Medicine on splitting their VMware Workspace One environment to only provide management for BYOD systems. For my work on Izzy, I received the President's Staff Award of Distinction in 2019.
+            {To expand the scope of Mac management to all of campus, I proposed and led an initiative to sell Izzy, the Ruby platform I developed to control \munki\ and Jamf, as an independent service. I met with unit leadership, technical stakeholders, and end-users to understand their needs and discuss the benefits of embracing Mac management technologies. I provided pilots, training, and ongoing support during each unit's full-scale roll-out process. I coordinated bringing on all but one campus department, school, and college -- from dozens to thousands of systems -- including Michigan Medicine (PHI), the College of Engineering (ITAR), Ross Business School, and the Dearborn campus. As of today, we have just over 10,000 systems under management. I have worked with Michigan Medicine on splitting their VMware Workspace One environment to only provide management for BYOD systems. For my work on Izzy, I received the President's Staff Award of Distinction in 2019.
             }
 
           \resumeItem{Izzy Client}
-            {In preparation for Apple Silicon systems, I rewrote our library of on-client scripts and tools - many in Ruby or Bash - into a single unified Swift binary. This frees us from relying on a scripting runtime or installing one on each client. Additionally enables TCC controls for full disk access and exceptions from EDR tools.
+            {In preparation for Apple Silicon systems, I rewrote our library of on-client scripts and tools -- many in Ruby or Bash -- into a single unified Swift binary. This frees us from relying on a scripting runtime or installing one on each client. Additionally enables TCC controls for full disk access and exceptions from EDR tools.
             }
 
           \resumeItem{Izzy at Home}
-            {When COVID-19 hit, I was able to scale up our emergency-use zero-touch install method to full production within a week, and were primarily using zero-touch by the end of March 2020. I unified our bootstrap process to work for either on-campus or at-home deployments, and we continue to use zero-touch with about 1 in 4 systems. We also use zero-touch in situations where a system needs to be returned to service and it is inconvenient for the customer to bring it to campus. I worked with our Windows team to help build an offline domain join registry in Go for their InTune-based at-home deployment.}
+            {When COVID-19 hit, I was able to scale up our emergency-use zero-touch install method to full production within a week, and we were primarily using zero-touch by the end of March 2020. I unified our bootstrap process to work for either on-campus or at-home deployments, and we continue to use zero-touch with about 1 in 4 systems. We also use zero-touch in situations where a system needs to be returned to service and it is inconvenient for the customer to bring it to campus. I worked with our Windows team to help build an offline domain join registry in Go for their InTune-based at-home deployment.}
 
           \resumeItem{Additional Tooling}
-            {I wrote and deployed an API server - written in Swift Vapor, deployed to Kubernetes - for our block-M menubar tool. I created a few automations in Go (and deployed to Kubernetes) to validate our Jamf database, which then notify us in Slack - for example, when duplicate system is registered after a logic board replacement.}
+            {I wrote and deployed an API server -- written in Swift Vapor, deployed to Kubernetes -- for our block-M menubar tool. I created a few automations in Go (and deployed to Kubernetes) to validate our Jamf database, and then notify us in Slack -- for example, when a duplicate system is registered after a logic board replacement.}
 
           \resumeItem{Telemetry and Monitoring}
             {In addition to the reporting Izzy and Jamf both gather, I plumbed in ElasticSearch, providing robust dashboards and metrics to monitor the state of the overall fleet. We used these dashboards to adjust deployment deadlines for macOS patch updates, realizing that the majority of users upgraded within a week of release.
@@ -136,7 +136,7 @@
         {Mac Team Lead}{2015--2017}
         \resumeItemListStart
           \resumeItem{MiWorkspace}
-            {With the roll-out of NextGen's desktop service - MiWorkspace - I became the team lead, overseeing four direct reports. I was responsible for coordinating work between the team and each University department as they enrolled in the service, meeting with technical specialists in each unit, and adjusting our services to meet their specific unit's needs. During this roll-out phase, we simultaneously had four different units in different states of engagement, from preparatory meetings, proof of concept, actual nightly deployments, and post-deployment adjustments.
+            {With the roll-out of Michigan's NextGen's desktop service -- MiWorkspace -- I became the team lead, overseeing four direct reports. I was responsible for coordinating work between the team and each University department as they enrolled in the service, meeting with technical specialists in each unit, and adjusting our services to meet their specific unit's needs. During this roll-out phase, we simultaneously had four different units in different states of engagement, from preparatory meetings, proof of concept, actual nightly deployments, and post-deployment adjustments.
             }
 
           \resumeItem{NoMAD Login}
@@ -156,7 +156,7 @@
         {Platform Senior Engineer}{2012--2015}
         \resumeItemListStart
           \resumeItem{NextGen Michigan}
-            {In 2012, the University redesigned central IT services, including - for the first time ever - a full desktop management service. Izzy became the key technology for Mac management, and I was responsible for implementing Izzy at campus scale. We scaled to over 4,000 clients by 2014.}
+            {In 2012, the University redesigned central IT services, including -- for the first time ever -- a full desktop management service. Izzy became the key technology for Mac management, and I was responsible for implementing Izzy at campus scale. We scaled to over 4,000 clients by 2014.}
 
           \resumeItem{Automation}
             {As part of NextGen, we hired two additional Mac team members. Together, we expanded my Jenkins-based package automation to around 300 different titles, all automatically picked up and deployed to test and QA clients, and then deployed to production weekly. I was the lead developer on the automation pipeline, helping my teammates develop techniques in HTML scraping and command-line package creation.}
@@ -168,7 +168,7 @@
             {I wrote a menubar tool in Objective-C for quick access to support links and shared storage. It received its configuration from Izzy, and could be customized at a business unit level.}
 
           \resumeItem{IzzyStor}
-            {I wrote a Mac OS app to archive and restore systems for rebuilding them - an offline migration assistant. These tool was used by the night onboarding team to archive, reload, and restore up to fifty systems a night. For safety, IzzyStor encrypts all archives at rest.}
+            {I wrote a Mac OS app to archive and restore systems for rebuilding them -- an offline migration assistant. These tool was used by the night onboarding team to archive, reload, and restore up to fifty systems a night. For safety, IzzyStor encrypts all archives at rest.}
 
           \resumeItem{Campus Computing}
             {I coordinated the replacement of \texttt{radmind} to Izzy for the University's public use computing sites, approximately 500 clients across 60 locations.}
