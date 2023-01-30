@@ -94,8 +94,8 @@
 \thispagestyle{empty}
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://jamesez.io/}{\Large Jim Zajkowski}} & \href{mailto:jim@jamesez.io}{jim@jamesez.io}\\
-  \href{https://jamesez.io/}{jamesez.io} & 734-846-1988 \\
+  \textbf{\href{https://jamesez.io/}{\Large Jim Zajkowski}} & github: \href{https://github.com/jamesez}{jamesez} and \href{https://github.com/umich-mac}{umich-mac}\\
+  \href{mailto:jim@jamesez.io}{jim\ @\ jamesez.io} & 734-846-1988 \\
 \end{tabular*}
 
 
@@ -111,22 +111,25 @@
         {DevOps Architect Supervisor}{2017--Present}
         \resumeItemListStart
           \resumeItem{Izzy as a Service}
-            {To expand the scope of Mac management to all of campus, I proposed and led an initiative to sell Izzy, the platform I developed on top of \munki\ and Jamf, as an independent service. I met with unit leadership, technical stakeholders, and end-users to understand their needs and discuss the benefits of embracing Mac management technologies. I provided pilots, training, and ongoing support during each unit's full-scale roll-out process. I coordinated bringing on all but one campus department, school, and college - from dozens to thousands of systems - including Michigan Medicine (PHI), the College of Engineering (ITAR), Ross Business School, and the Dearborn campus. As of today, we have just over 10,000 systems under management. I have worked with Michigan Medicine on splitting their VMware Workspace One environment to only provide management for BYOD systems. For my work on Izzy, I received the President's Staff Award of Distinction in 2019.
+            {To expand the scope of Mac management to all of campus, I proposed and led an initiative to sell Izzy, the Ruby platform I developed to control \munki\ and Jamf, as an independent service. I met with unit leadership, technical stakeholders, and end-users to understand their needs and discuss the benefits of embracing Mac management technologies. I provided pilots, training, and ongoing support during each unit's full-scale roll-out process. I coordinated bringing on all but one campus department, school, and college - from dozens to thousands of systems - including Michigan Medicine (PHI), the College of Engineering (ITAR), Ross Business School, and the Dearborn campus. As of today, we have just over 10,000 systems under management. I have worked with Michigan Medicine on splitting their VMware Workspace One environment to only provide management for BYOD systems. For my work on Izzy, I received the President's Staff Award of Distinction in 2019.
             }
 
           \resumeItem{Izzy Client}
-            {In preparation for Apple Silicon systems, I rewrote our library of on-client scripts and tools - many written in Ruby or Bash - to a single unified Swift binary. This allows us to exempt the tool in CrowdStrike, and we push a profile to grant it full disk access.
+            {In preparation for Apple Silicon systems, I rewrote our library of on-client scripts and tools - many in Ruby or Bash - into a single unified Swift binary. This frees us from relying on a scripting runtime or installing one on each client. Additionally enables TCC controls for full disk access and exceptions from EDR tools.
             }
 
           \resumeItem{Izzy at Home}
-            {When COVID-19 hit, I was able to scale up our emergency-use zero-touch install method to full production within a week, and were primarily using zero-touch by the end of March 2020. I unified our bootstrap process to work for either on-campus or at-home deployments, and we continue to use zero-touch with about 1 in 4 systems. We also use zero-touch in situations where a system needs to be returned to service and it is inconvenient for the customer to bring it to campus. I worked with our Windows team to help build an offline domain join registry for their InTune-based at-home deployment.}
+            {When COVID-19 hit, I was able to scale up our emergency-use zero-touch install method to full production within a week, and were primarily using zero-touch by the end of March 2020. I unified our bootstrap process to work for either on-campus or at-home deployments, and we continue to use zero-touch with about 1 in 4 systems. We also use zero-touch in situations where a system needs to be returned to service and it is inconvenient for the customer to bring it to campus. I worked with our Windows team to help build an offline domain join registry in Go for their InTune-based at-home deployment.}
+
+          \resumeItem{Additional Tooling}
+            {I wrote and deployed an API server - written in Swift Vapor, deployed to Kubernetes - for our block-M menubar tool. I created a few automations in Go (and deployed to Kubernetes) to validate our Jamf database, which then notify us in Slack - for example, when duplicate system is registered after a logic board replacement.}
 
           \resumeItem{Telemetry and Monitoring}
             {In addition to the reporting Izzy and Jamf both gather, I plumbed in ElasticSearch, providing robust dashboards and metrics to monitor the state of the overall fleet. We used these dashboards to adjust deployment deadlines for macOS patch updates, realizing that the majority of users upgraded within a week of release.
             }
 
           \resumeItem{Plenary Developer}
-            {I have been a lead developer on tools for collaborative services, including a Microsoft Teams creation and synchronization engine to Azure ActiveDirectory, a pre-flight validator for Slack Enterprise migrations, and GitHub Enterprise internal tooling. I am a member of the Technology Review Board which all new projects must meet with before developing solutions. I have been an early adopter of cloud, devops, and container technologies, and advise on and advocate for modern devops practices.}
+            {I have been a lead developer on tools for collaborative services, including a Microsoft Teams creation and synchronization engine to Azure ActiveDirectory, a pre-flight validator for Slack Enterprise migrations, and GitHub Enterprise internal tooling (all in Ruby). I am a member of the Technology Review Board which all new projects must meet with before developing solutions. I have been an early adopter of cloud, devops, and container technologies, and advise on and advocate for modern devops practices.}
         \resumeItemListEnd
 
         \resumeSubSubheading
@@ -137,7 +140,7 @@
             }
 
           \resumeItem{NoMAD Login}
-            {In order to move off Active Directory binding, I created a custom fork of NoMAD Login to address our specific needs around SecureToken handling and administrative access. Our team also migrated from NoMAD to the Single-Sign-On extension in macOS Big Sur.}
+            {In order to move off Active Directory binding, I created a custom mechanism inside NoMAD Login in Objective-C to address our specific needs around SecureToken handling and administrative access. Our team also migrated from NoMAD to the Single-Sign-On extension in macOS Big Sur.}
 
           \resumeItem{DevOps}
             {I transitioned Izzy's infrastructure to running first in Docker and managed with Ansible, then finally to a managed Kubernetes cluster in AWS; in addition to continuous deployment, automatic resiliency reduced on-call demands. I designed and deployed an on-campus package content delivery network, delivering terabytes of package updates weekly to thousands of clients.}
@@ -146,7 +149,7 @@
             {With increased requirements around DEP, supervision, and MDM profile deployments, we deployed Jamf Pro to support initial bootstrap and profile management. We continue to use \munki's best-in-class package resolution. Jamf is controlled via APIs called from the Izzy web app.}
 
           \resumeItem{PaperCut Follow-Me iOS Job Release}
-            {I wrote an iOS app to let customers release ``Follow-Me'' print jobs. I used Bluetooth beacons to identify which printers are nearby, falling back to scanning a QR code sticker on the printer. A later version added an iOS sharing acceptor to let users directly print PDFs to the follow-me queue from their iPhone or iPad.}
+            {I wrote a Swift iOS app to let customers release ``Follow-Me'' print jobs. I used Bluetooth beacons to identify which printers are nearby, falling back to scanning a QR code sticker on the printer. A later version added an iOS sharing acceptor to let users directly print PDFs to the follow-me queue from their iPhone or iPad.}
         \resumeItemListEnd
 
       \resumeSubSubheading
@@ -159,10 +162,10 @@
             {As part of NextGen, we hired two additional Mac team members. Together, we expanded my Jenkins-based package automation to around 300 different titles, all automatically picked up and deployed to test and QA clients, and then deployed to production weekly. I was the lead developer on the automation pipeline, helping my teammates develop techniques in HTML scraping and command-line package creation.}
 
           \resumeItem{Iron Izzy}
-            {I designed a FileVault management toolchain for Izzy, called Iron Izzy, to enable FileVault and key escrow, for Mac OS 10.7 clients. The tool was built in Ruby and Objective C, and coordinated key rotation with Izzy. All MacBooks built with Izzy were additionally secured by Iron Izzy.}
+            {I designed a FileVault management toolchain for Izzy, called Iron Izzy, to enable FileVault and key escrow, for Mac OS 10.7 clients. The tool was built in Ruby and Objective-C, and coordinated key rotation with Izzy. All MacBooks built with Izzy were additionally secured by Iron Izzy.}
 
           \resumeItem{Block M Menubar}
-            {I wrote a menubar tool in Objective C for quick access to support links and shared storage. It received its configuration from Izzy, and could be customized at a business unit level.}
+            {I wrote a menubar tool in Objective-C for quick access to support links and shared storage. It received its configuration from Izzy, and could be customized at a business unit level.}
 
           \resumeItem{IzzyStor}
             {I wrote a Mac OS app to archive and restore systems for rebuilding them - an offline migration assistant. These tool was used by the night onboarding team to archive, reload, and restore up to fifty systems a night. For safety, IzzyStor encrypts all archives at rest.}
@@ -247,12 +250,12 @@
 
 %
 %--------PROGRAMMING SKILLS------------
-%\section{Programming Skills}
+% \section{Programming Skills}
 %  \resumeSubHeadingListStart
 %    \item{
-%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+%      \textbf{Languages}{: Comprehensive knowledge of Ruby, Objective-C and Swift. Adept at Go, both client and server-side, and Go is area of recent focus for me. Working knowledge of Python.}
 %      \hfill
-%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%      \textbf{Open Source}{: My open source releases are published under github.com/jamesez and github.com/umich-mac}
 %    }
 %  \resumeSubHeadingListEnd
 
